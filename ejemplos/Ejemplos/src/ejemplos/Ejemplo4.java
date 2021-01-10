@@ -21,17 +21,17 @@ public class Ejemplo4 {
         int numeroDatos = 4;
         int[] informacion = obtenerDatos(numeroDatos);
         for (int i = 0; i < informacion.length; i++) {
-            System.out.printf("Datos ingresado: %d\n", informacion[i]);
+            System.out.printf("Datos ingresado: %s\n", informacion[i]);
         }
     }
     
-    public static int[] obtenerDatos(int numero){
+    public static String[] obtenerDatos(String numero){
         Scanner entrada = new Scanner(System.in);
-        int [] arregloResultante = new int[numero];
+        String [] arregloResultante = new String[numero];
         int valor;
         for (int i = 0; i < numero; i++) {
             System.out.println("Ingrese valor");
-            valor = entrada.nextInt();
+            valor = entrada.nextLine();
             arregloResultante[i] = valor;
         }
         return arregloResultante;
